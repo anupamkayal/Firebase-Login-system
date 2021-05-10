@@ -4,7 +4,7 @@ from kivymd.uix.button import MDIconButton
 from kivy.uix.behaviors import ToggleButtonBehavior
 from kivy.properties import  ObjectProperty
 from kivymd.toast import  toast
-from Game import Game
+
 import  requests
 from kivymd.uix.snackbar import Snackbar
 
@@ -152,7 +152,10 @@ class login(MDApp):
 			name.add(value['Name'])
 		print(name)
 		if email in email_set and password in password_set or email in username:
-			Game().run()
+			Snackbar(text="login successful")
+			snackbar.show()
+			
+			
 		else:
 			snackbar=Snackbar(text="Invalid Email/Username & Password")
 			snackbar.show()

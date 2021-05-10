@@ -152,8 +152,9 @@ class login(MDApp):
 			name.add(value['Name'])
 		print(name)
 		if email in email_set and password in password_set or email in username:
-			Snackbar(text="login successful")
+			snackbar=Snackbar(text="Invalid Email/Username & Password")
 			snackbar.show()
+			
 			
 			
 		else:
